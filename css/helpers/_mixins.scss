@@ -1,0 +1,32 @@
+@mixin mediaQuery($device){
+    @if($device==small){
+        @media(max-width:767px) {
+            @content;
+        }
+    }
+    @else if($device==medium){
+        @media(min-width:768px) and (max-width:991px) {
+            @content;
+        }
+    }
+    
+    @else if($device==large){
+        @media(min-width:992px) and (max-width:1199px) {
+            @content;
+        }
+    }
+    @else if($device==xlarge){
+        @media(min-width:1200px) {
+            @content;
+        }
+    }
+   
+}
+
+
+
+@mixin flexCentering(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
